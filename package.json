@@ -6,10 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npx eslint \"./**/*.{js,jsx,mjs,cjs}\"",
-    "lint:fix": "npx eslint \"./**/*.{js,jsx,mjs,cjs}\" --fix",
+    "lint": "eslint \"./**/*.{js,jsx,mjs,cjs}\"",
+    "lint:fix": "eslint \"./**/*.{js,jsx,mjs,cjs}\" --fix",
     "check-format": "prettier --check \".\"",
-    "format": "prettier --write \".\""
+    "format": "prettier --write \".\"",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,cjs}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,css,md}": "prettier --write"
   },
   "dependencies": {
     "firebase": "7.17.1",
@@ -26,6 +34,8 @@
     "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.5.1",
     "prettier": "^3.9.7"
   }
 }

@@ -89,7 +89,7 @@ export default [
 
       // Variables declaradas que no se usan
       "no-unused-vars": [
-        "warn",
+        "error",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }
       ],
 
