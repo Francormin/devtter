@@ -1,0 +1,19 @@
+# Despliegues y dependencias
+.next/
+node_modules/
+out/
+build/
+coverage/
+
+# Archivos de bloqueo de paquetes (ya vienen formateados por npm)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Archivos multimedia de la carpeta pública
+public/
+
+# Variables de entorno y archivos del sistema
+.env*
+.DS_Store
+Thumbs.db
